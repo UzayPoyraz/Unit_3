@@ -1,0 +1,4 @@
+# This program will get the square of the number inputted
+a = int(input("enter the number you want to be squared: "))
+square = a*a
+print "The result is", square
