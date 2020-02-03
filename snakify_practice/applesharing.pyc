@@ -1,0 +1,7 @@
+# This program will show how many apples per student and how many are left in the basket
+n = int(input("Enter the amount of students: "))
+k = int(input("Enter the amount of apples: "))
+perstu = n // k
+print "the number of apples each students get is:", perstu
+basket = n % 5
+print "The number of apples in the basket is:", basket
