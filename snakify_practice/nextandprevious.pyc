@@ -1,0 +1,6 @@
+# This program will show you the next and previous numbers of an input
+a = int(input("Enter a number: "))
+previous = a - 1
+print "the previous number is", previous
+next = a + 1
+print "The next number is", next
