@@ -1,0 +1,10 @@
+# This program will show you the difference of seconds between two timestamps
+a = int(input("Enter hour: "))
+b = int(input("Enter minute"))
+c = int(input("Enter second"))
+d = int(input("Enter second hour: "))
+e = int(input("Enter second minute"))
+f = int(input("Enter second second"))
+
+difference =(d * 3600 + e * 60 + f) - ((a * 3600 + b * 60 + c))
+print "The time difference (in seconds) is:", difference
