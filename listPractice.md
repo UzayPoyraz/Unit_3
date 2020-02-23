@@ -14,6 +14,7 @@ num = input().split()
 for i in range (1, len(num)):
     if num[i] > num[i-1]:
         print(num[i])
+
 Practice 4:
 I really didn't understand the question! I will ask this one as well
 
