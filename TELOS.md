@@ -11,6 +11,8 @@ The project is completely legal because the coding language I will use is licenc
 will be mine.
 
 ### O - Operational - How will the current operations support the change?
+The program I am developing does not having any other user than my client itself so a staff of trained people will be unnecessary. In 
+addition, I will try to develope the program so it is not hard to comprehence how to use it.
 
 ### S - Scheduling - Can the project be done in time?
 If I put enough time on certain days to the program and have a good plan,
