@@ -1,6 +1,6 @@
 1) 
 # game loop
-while 1:
+`while 1:
     enemy_1 = input()  # name of enemy 1
     dist_1 = int(input())  # distance to enemy 1
     enemy_2 = input()  # name of enemy 2
@@ -13,11 +13,11 @@ while 1:
     if dist_1 < dist_2:
         print(enemy_1)
     else:
-        print(enemy_2)
+        print(enemy_2)`
         
-2)
+`2)
 The Descent:
-import sys
+``import sys
 import math
 
 # The while loop represents the game.
@@ -40,9 +40,9 @@ while True:
     # To debug: print("Debug messages...", file=sys.stderr)
 
     # The index of the mountain to fire on.
-    print(shoot)
-3)Thor's power:
-import sys
+    print(shoot)`
+``3)Thor's power:
+`import sys
 import math
 
 # Auto-generated code below aims at helping you parse
@@ -81,4 +81,4 @@ while True:
     # To debug: print("Debug messages...", file=sys.stderr)
 
 
-    # A single line providing the move to be made: N NE E SE S SW W or NW
+    # A single line providing the move to be made: N NE E SE S SW W or NW```
