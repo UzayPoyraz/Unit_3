@@ -1,5 +1,5 @@
 1) 
-`# game loop
+`#game loop
 while 1:
     enemy_1 = input()  # name of enemy 1
     dist_1 = int(input())  # distance to enemy 1
@@ -14,10 +14,10 @@ while 1:
         print(enemy_1)
     else:
         print(enemy_2)
-        `
+`
         
-2)
-The Descent:
+### 2)
+### The Descent:
 ``import sys
 import math
 
@@ -28,7 +28,7 @@ import math
 #The inputs you are given are automatically updated according to your last actions.
 
 
-# game loop
+#game loop
 while True:
     shoot = 0
     height = 0
@@ -37,10 +37,10 @@ while True:
         if mountain_h>height:
             shoot=i
             height=mountain_h
-    # Write an action using print
-    # To debug: print("Debug messages...", file=sys.stderr)
+    #Write an action using print
+    #To debug: print("Debug messages...", file=sys.stderr)
 
-    # The index of the mountain to fire on.
+    #The index of the mountain to fire on.
     print(shoot)``
 3)Thor's power:
 ```import sys
