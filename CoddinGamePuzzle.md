@@ -20,7 +20,8 @@ while 1:
         
 ### 2)
 ### The Descent:
-``import sys
+`` 
+import sys
 import math
 
 #The while loop represents the game.
