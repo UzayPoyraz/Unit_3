@@ -1,5 +1,6 @@
 1) 
-`#game loop
+```
+#game loop
 while 1:
     enemy_1 = input()  # name of enemy 1
     dist_1 = int(input())  # distance to enemy 1
@@ -14,7 +15,8 @@ while 1:
         print(enemy_1)
     else:
         print(enemy_2)
-`
+ 
+```
         
 ### 2)
 ### The Descent:
