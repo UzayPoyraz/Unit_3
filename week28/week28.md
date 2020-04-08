@@ -2,7 +2,7 @@
 A usability issue can be designing the device too small as it will be harder to access for users.
 
 ### 2:
-this is in the file 'sylques2'
+this is in the file csw28.jpg
 
 ### 3:
 A protocol is a standard set of rules that allow electronic devices to communicate with each other.
