@@ -1,0 +1,10 @@
+import random
+import string
+many = int(input("Enter how many passwords you want: "))
+
+def ranstring(stringlength=20):
+    password_characters = string.ascii_letters + string.digits + string.punctuation
+    return ''.join(random.choice(password_characters)
+    for i in range(many))
+    print(ranstring(20))
+## Im stuck here :/
