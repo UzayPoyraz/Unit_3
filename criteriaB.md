@@ -2,7 +2,7 @@ Criteria B: Designing
 ===
 
 ## The sketch of the application:
-Unfortuneately, I do not have the photos of the sketches made for the application, but from the recordings there are multiple feedback I got and instead of making anew sketch, I designed the draft of the application in Qt designer according to the feedback I recieved.
+Unfortunately, I do not have the photos of the sketches made for the application, but from the recordings there are multiple feedback I got and instead of making anew sketch, I designed the draft of the application in Qt designer according to the feedback I recieved.
 
 
 ## Feedback:
