@@ -35,7 +35,9 @@ The User interface is divided into 6 windows, these are:
 After working on the edit add/delete section, I decided to get rid of the Add/Delete and Edit windows. The reason behind this is the inconvinience of having those windows and having a different solution instead.
 Basically what I did was deleting the two of the windows and instead of typing in the details of the item you want to change, update or delete, I put all of those in the List window. In the list window I put two buttons: "Save" and "Revert Changes". Now if the user wants to edit something on the table, they can click on the square(word) they want to change, type in the new information and save with the button below. If the user wants to undo an information they can click the "Revert Changes" this will undo the most recent change.
 
-! [Old version:](DeleteandAddDraft.png)
+###Old Versions:
+
+![](DeleteandAddDraft.png)
 ![](EditDraft.png)
 ![](ListDraft.ping)
 
