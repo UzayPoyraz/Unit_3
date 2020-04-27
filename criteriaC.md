@@ -57,7 +57,15 @@ Now that everything is done on the set-up part, I continued on with the function
 
 ## Functioning Buttons:
 ### a) Functioning betton for directing to other windows.
-To start with the program, I begined with placing the "Login" window in front of the MainWindow which is the menu. Firstly, I 
+My first function was for the first appeared window: LogIn. I started by defining the register button (not the process but the direction to the register window) and the exit button. First thing I did was indicating which definition the button will look at when the button is pressed.
+`self.register_2.clicked.connect(self.regApp)` So now when the register button is clicked (labeled as register_2) it will direct to the regApp. I continued on with defining the regApp. I would follow a similar process as how I make the login app appear.
+
+`    def regApp(self):
+        regVar = registerApp(self)
+        regVar.show()`
+ As seen above, I created a variable in the definition and set the variable as registerApp(self) this is the register window. To portray the register window, I used a command to show the window.
+
+
 ## Reading a database:
 
 ## Login:
