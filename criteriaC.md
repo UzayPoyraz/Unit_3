@@ -44,7 +44,7 @@ I wanted my login app to appear as the first window so first, I chaned my login 
  logVar.show()`
  Right under the `self.setupUi` so that the mainwindow app is inaccesable with the login, which looks like this:
  
- ![](appic.png)
+ ![main window is behind](appic.png)
 
 Finally, since the program is abitrary (personal whim) amount of objects, I had to define QApplications as a container and the main as myMain window. Here is how I did it:
 
