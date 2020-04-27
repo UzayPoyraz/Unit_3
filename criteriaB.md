@@ -37,7 +37,7 @@ Basically what I did was deleting the two of the windows and instead of typing i
 
 ## Old Versions:
 
-![](DeleteandAddDraft.png)
-![](EditDraft.png)
-![](ListDraft.ping)
+![](GuiOfProgram/DeleteandAddDraft.png)
+![](GuiOfProgram/EditDraft.png)
+![](GuiOfProgram/ListDraft.ping)
 
