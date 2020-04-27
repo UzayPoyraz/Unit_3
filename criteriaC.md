@@ -80,16 +80,76 @@ I did my last touches on direction so now I can go from window to window by butt
 
 Last two buttons I needed to define were the login and register buttons. I left them to the last because they are not defined like the other button. Furthermore, they need to meet some condition in order to work or leave for the other window. I started with register.
 
-### b) Registering:
+### b) Registering and Login:
 In order to start the registering process, I decided to think about how I wanted to do it. There were couple ideas in mind but the most logical one was by using the hash method. 
 
 ![](appimages/Flowreg.jpg)
 
+As seen from the flow diagram before getting inputs from the user I needed to `import hashlib, binascii, os` by importing these now I can generate hash passwords so I found one that is already defined and decided to use it (credits are on the bibliography section):
 
-## Login:
+`def hash_password(password):
+    """Hash a password for storing."""
+    salt = hashlib.sha256(os.urandom(60)).hexdigest().encode('ascii')
+    pwdhash = hashlib.pbkdf2_hmac('sha512', password.encode('utf-8'),
+                                  salt, 100000)
+    pwdhash = binascii.hexlify(pwdhash)
+    return (salt + pwdhash).decode('ascii')`
+On the third line we generated salt with 60 random numbers, and on the fourth line we created hash and run it 10000 times. This generates a very secure password that is very hard to break and store it in a output file. 
+
+For logging in we are going to use a similar method
+
+![](appimages/Flowlog.jpg)
+
+In the login section, we are going to encrypt the entered input with salt and hash and see if it matches the stored data that we recently got from the registration. In order to encrypt again from Moluna Alessandro, we define a verification:
+
+`def verify_password(stored_password, provided_password):
+    """Verify a stored password against one provided by user"""
+    salt = stored_password[:64]
+    stored_password = stored_password[64: -1]
+    pwdhash = hashlib.pbkdf2_hmac('sha512',
+                                  provided_password.encode('utf-8'),
+                                  salt.encode('ascii'),
+                                  100000)
+    pwdhash = binascii.hexlify(pwdhash).decode('ascii')
+    return pwdhash == stored_password`
+In the third line, the salt takes the first 64 characters of the hash. We encrypt it with the same method and if the encrpyted version matches the stored version, the program returns True.
+
+**Furthermore on registration** Now that we can sucessfuly generate encrypted passwords, we need to store them. I first start by directing the register button 
+
+`        self.reg_1.clicked.connect(self.try_register)` Now time to define it.
+
+`    def try_register(self):
+        if self.validate_registration():
+            self.store()
+            self.close()`
+Here this if command checks if the register is valid or not. If it is valid it will store it and close it.
+
+**There are couple of things we need to define**. First one is the validation of the password before the whole registration. So I created a definition:
+
+`    def password_validation(self):
+        password = self.pass_1.text()
+        confpass = self.pass_2.text()
+        if password != confpass:
+            self.pass_1.setStyleSheet("border: 3px solid red")
+            self.pass_2.setStyleSheet("border: 3px solid red")
+            return False
+        else:
+            self.pass_1.setStyleSheet("border: 3px solid green")
+            self.pass_2.setStyleSheet("border: 3px solid green")
+            return True`
+I created two variables: password and confpass. These are the password and confirm password inputs respectively. I added an if command so if the password is not the same as confirm password, outline of both of the boxes will turn red and it will return false which makes the user try again. Here is an image when the password does not match confirm password:
+
+![](appimages/redreg.png)
+
+Else, when both of the passwords match eachother, we will go to the second step, validating registration.
+            
+
 
 ## Editing
 
 ## Adding
 
 ## Deleting
+
+## Bibliography
+Molina, Alessandro. “Hashing Passwords in Python.” Useful Code, 20 Sept. 2018, www.vitoshacademy.com/hashing-passwords-in-python/.
