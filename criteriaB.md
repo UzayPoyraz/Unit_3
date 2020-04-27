@@ -35,9 +35,16 @@ The User interface is divided into 6 windows, these are:
 After working on the edit add/delete section, I decided to get rid of the Add/Delete and Edit windows. The reason behind this is the inconvinience of having those windows and having a different solution instead.
 Basically what I did was deleting the two of the windows and instead of typing in the details of the item you want to change, update or delete, I put all of those in the List window. In the list window I put two buttons: "Save" and "Revert Changes". Now if the user wants to edit something on the table, they can click on the square(word) they want to change, type in the new information and save with the button below. If the user wants to undo an information they can click the "Revert Changes" this will undo the most recent change.
 
+## Final Version:
+Now I have four windows. The login and register windows are the programs are untouched, it is the same and can be found in the Gui of program. There are no edit, add/delete also the list and menu are changed
+
 ## Old Versions:
 
 ![](GuiOfProgram/DeleteandAddDraft.png)
 ![](GuiOfProgram/EditDraft.png)
-![](GuiOfProgram/ListDraft.ping)
+![](GuiOfProgram/ListDraft.png)
+
+## New Version:
+
+![]
 
