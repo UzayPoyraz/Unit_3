@@ -49,3 +49,5 @@ Now I have four windows. The login and register windows are the programs are unt
 ![](GuiOfProgram/NewList.png)
 ![](GuiOfProgram/NewMenu.png)
 
+### Further improvements:
+If I could add something to make the program easier to use, I would like to add a search section for the program so the database is more accesible to the user. Additionally, I would like to create better visual for the design, fortunately, we are not graded for how good the design looks but I would change that if I could.
