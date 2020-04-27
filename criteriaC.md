@@ -1,7 +1,7 @@
 Criteria C: Developement
 ==
 ## Creating a mainApp file:
-### a) Imports: 
+### a) Starting Imports: 
 In order to collect all of my windows into one application, I created a mainApp.py folder. After changing all of the dialog windows into QDialog by importing QDialog and changing from object to QDialog`
 
 from PyQt5.QtWidgets import QDialog 
@@ -36,9 +36,15 @@ I modified all of the classes to be their parent so any work I do on a class onl
     def __init__(self, parent=None):
         super(logInApp, self).__init__(parent)
         self.setupUi(self)`
-        
+### c) Final touches before I started the functioning process:
+Since the program is abitrary (personal whim) amount of objects, I had to define QApplications as a container and the main as myMain window. Here is how I did it:
 
+`container = QApplication(sys.argv)
+main = mainWindowApp()
+main.show()
+container.exec_()`
 
+Now that everything is done on the set-up part, I continued on with the functioning buttons
 
 ## Functioning Buttons:
 ### a) Functioning betton for directing to other windows.
