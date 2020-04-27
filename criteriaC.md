@@ -142,6 +142,59 @@ I created two variables: password and confpass. These are the password and confi
 ![](appimages/redreg.png)
 
 Else, when both of the passwords match eachother, we will go to the second step, validating registration.
+
+Now it is time to define the registration, so I created a definition:
+
+`    def validate_registration(self):
+        username = self.username_1.text()
+        password = self.password_validation()
+        print(username, password)
+        return username and password`
+        
+I start by making a username and password variable. The two password variables (this one and the one from the other definition) are not the same because they are under different definitions. So for this time I set the password as the validated password (the True one). I print the username and password so it can be seen in the console. I return the username and password so it can now go to the storing proccess. 
+
+Final step of registration: storing. Again I started by creating a definition.
+
+    `def store(self):
+        username = self.username_1.text()
+        password = self.pass_1.text()
+        print("Hashing", username + password)
+        msg = hash_password(username + password)
+        with open('Output.txt', "a") as output_file:
+            output_file.write('{}\n'.format(msg))
+        self.close()`
+Again I set two variables username and password and set them as the validated version of the username and password. I start hashing the username and password so it is encyrpted. I get the hashed password, open the Output.txt file and append it and write the hashed password into the output text. I finish it off by closing the store.
+
+The registration is complete, **Now time to finish login**.
+
+Similar to the registration I create a directory `self.confirm.clicked.connect(self.try_login)` and define it.
+
+   ` def try_login(self):
+        username = self.username.text()
+        password = self.password.text()
+        print("Hashing", username + password)
+        correct_password = username + password
+        with open('Output.txt', "r") as output_file:
+            for stored_password in output_file:
+                if verify_password(stored_password, correct_password):
+                    self.username.setStyleSheet("border: 3px solid green")
+                    self.password.setStyleSheet("border: 3px solid green")
+                    self.close()
+
+                else:
+                    self.username.setStyleSheet("border: 3px solid red")
+                    self.password.setStyleSheet("border: 3px solid red")`
+`
+    One thing that is different between the login and registration is that, I can handle the login section in one definition. I again start by setting two variables. These are Username and Password respectively. After I get the username and password I hash them. I create a third variable "correct password" with is username + password. Moreover, I open the output file and start verification process. In scope of the stored passwords in the Output.txt file, if the "verify_password" so the encrypted stored password and the entered password, I display green outline on the username and password and close the login window so the MainWindow app (aka the menu) can be accessed. Otherwise, the outline will be red and the user won't be able to access the menu.
+    **Here are some examples of how it works**
+    
+![When the password or username is wrong:](appimages/redlog.png)
+![When the username and password are correct:](appimages/correctlog.png)
+![](appimages/loggedmenu.png)
+
+
+
+
             
 
 
