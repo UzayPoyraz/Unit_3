@@ -3,11 +3,11 @@ Criteria C: Developement
 ## Functioning Buttons:
 ### a) Functioning directing buttons:
 
+## Reading a database:
+
 ## Login:
 
 ## Register:
-
-## Reading a database:
 
 ## Editing
 
