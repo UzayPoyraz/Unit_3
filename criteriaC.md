@@ -64,6 +64,12 @@ My first function was for the first appeared window: LogIn. I started by definin
         regVar = registerApp(self)
         regVar.show()`
  As seen above, I created a variable in the definition and set the variable as registerApp(self) this is the register window. To portray the register window, I used a command to show the window.
+ 
+ ![This is what pops up when register button is clicked](regispic.png)
+ 
+Now for exiting, I did the same `self.exit.clicked.connect(self.exitApp)` and later on defined exit as
+`    def exitApp(self):
+        sys.exit(0)` so it exits from the system successfuly.
 
 
 ## Reading a database:
