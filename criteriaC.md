@@ -187,8 +187,12 @@ Similar to the registration I create a directory `self.confirm.clicked.connect(s
 `
     One thing that is different between the login and registration is that, I can handle the login section in one definition. I again start by setting two variables. These are Username and Password respectively. After I get the username and password I hash them. I create a third variable "correct password" with is username + password. Moreover, I open the output file and start verification process. In scope of the stored passwords in the Output.txt file, if the "verify_password" so the encrypted stored password and the entered password, I display green outline on the username and password and close the login window so the MainWindow app (aka the menu) can be accessed. Otherwise, the outline will be red and the user won't be able to access the menu.
     **Here are some examples of how it works**
+    **When the password or username is wrong**
     
 ![When the password or username is wrong:](appimages/redlog.png)
+
+**When the username and password are correct:
+
 ![When the username and password are correct:](appimages/correctlog.png)
 ![](appimages/loggedmenu.png)
 
