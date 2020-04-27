@@ -209,7 +209,7 @@ Starting with reading the database, I decided that I will save my data into a cs
 In this database, I devided the items exactly the same way on my tablew whidget so it is devided by number, brand, PP, PVC , used, unused, useable corner. After creating an example database, I needed a way to convert this csv file into the table.
 By the same methods as usual, I started by creating a direction `self.data = self.load_data()` and defining load_data
 
-`    def load_data(self):
+   ``def load_data(self):
         data = []
         with open('data.csv') as database:
             file = csv.reader(database, delimite=",")
@@ -218,15 +218,52 @@ By the same methods as usual, I started by creating a direction `self.data = sel
                     data.append([o, l, col])
                     self.tableWidget.setItem(o, l, QTableWidgetItem(col))
 
-        return data`
+        return data
   
-`**Code explanation:** I first set up a list. Then I opened the csv file as database and set a variable called file this variable read the database and defined the seperating value as ",'". Now I created o and l variables witch mentioned the file and row one by one. I appended the data in a list that contains o, l, col and set up the items with the setItem command to o, l and collumn (which are the ones we set from the database) finally I return the data so it goes in the list and the items are displayable.
+``**Code explanation:** I first set up a list. Then I opened the csv file as database and set a variable called file this variable read the database and defined the seperating value as ",'". Now I created o and l variables witch mentioned the file and row one by one. I appended the data in a list that contains o, l, col and set up the items with the setItem command to o, l and collumn (which are the ones we set from the database) finally I return the data so it goes in the list and the items are displayable.
 
-## Editing
+## Editing, Adding and Deleting:
 
-## Adding
+I initially though of seperating editting window and Add/Delete window and work on their. Later on I realized that that would be inconvinient so I got rid of both of the windows and merged everything into the list window. More details about that are on the **CriteriaB.md, Design section**. So the lastest version of my list currently looks like this:
 
-## Deleting
+![](NewMenu.png)
+
+The idea is that the user can click on the information and edit it as they wish. Once they input new information they can either save the changes are revert the changes back to the information.
+
+I started by directing the table properties to changeDB `self.tableWidget.cellChanged.connect(self.changeDB)`which is where I am going to define how to change the database. I also need to define the buttons but first they are set to be disabled so I enable them first:
+
+`self.changes_btn.setDisabled(False)
+ self.revert_btn.setDisabled(False)`
+ 
+First I need to direct these files so I can define them
+
+ `self.changes_btn.clicked.connect(self.save)
+  self.revert_btn.clicked.connect(self.cancel)`
+ 
+The definitions for these two are rather simple:
+    
+    `def save(self):
+        print("Save to CSV File")
+
+    def cancel(self):
+        print("Reload the table")`
+
+Basically, pressing the change button will save the updated version to the csv file and the cancel button will reload the table, getting rid of the new changes.
+
+Lastly, I will define the changeDB file. This is the last part of my program.
+
+`    def changeDB(self):
+        item = self.tableWidget.currentItem()
+        row = self.tableWidget.currentRow()
+        col = self.tableWidget.currentColumn()
+        self.tableWidget.item(row, col).setBackground(QtGui.Qcolor(100, 100, 150))
+        print(item.text())`
+I start by setting three variables. These are equilivent to the widgets of item, row and column respectively. One a square (the program sees it as row, col because anywhere you click will be in a row and a column) the place you clicked will change its background color so the user will know where they clicked and now the section is editable. By the buttons I generated, you can save or revert.     
+
+
+
 
 ## Bibliography
 Molina, Alessandro. “Hashing Passwords in Python.” Useful Code, 20 Sept. 2018, www.vitoshacademy.com/hashing-passwords-in-python/.
+
+Dr. Ruben Online classes (Videos and Slides)
