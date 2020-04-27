@@ -71,12 +71,22 @@ Now for exiting, I did the same `self.exit.clicked.connect(self.exitApp)` and la
 `    def exitApp(self):
         sys.exit(0)` so it exits from the system successfuly.
 
+I did my last touches on direction so now I can go from window to window by button clicks. Another example (From menu to list):
+        
+`self.list_button.clicked.connect(self.listapplication)  
+ def listapplication(self):
+        listvar = listApp(self)
+        listvar.show() `
 
-## Reading a database:
+Last two buttons I needed to define were the login and register buttons. I left them to the last because they are not defined like the other button. Furthermore, they need to meet some condition in order to work or leave for the other window. I started with register.
+
+### b) Registering:
+In order to start the registering process, I decided to think about how I wanted to do it. There were couple ideas in mind but the most logical one was by using the hash method. 
+
+![](appimages/Flowreg.jpg)
+
 
 ## Login:
-
-## Register:
 
 ## Editing
 
