@@ -46,5 +46,6 @@ Now I have four windows. The login and register windows are the programs are unt
 
 ## New Version:
 
-![]
+![](GuiOfProgram/NewList.png)
+![](GuiOfProgram/NewMenu.png)
 
