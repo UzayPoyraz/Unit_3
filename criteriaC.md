@@ -196,11 +196,31 @@ Similar to the registration I create a directory `self.confirm.clicked.connect(s
 ![When the username and password are correct:](appimages/correctlog.png)
 ![](appimages/loggedmenu.png)
 
+The Login and Register are completed succesfully so it is now time to work on the database and table itself.
 
+## Reading the database
+Starting with reading the database, I decided that I will save my data into a csv file. The csv file is a comma seperated values file so anything I add that is seperated by comas, will save. First I created myself an example database.
 
+`1, Faber Castell, Y, N, Y, N, Y
+ 2, Pilot, N, Y, N, Y, Y
+ 3, Pilot, N, Y, Y, N, N
+ 4, BIC, Y, N, Y, N, Y`
 
-            
+In this database, I devided the items exactly the same way on my tablew whidget so it is devided by number, brand, PP, PVC , used, unused, useable corner. After creating an example database, I needed a way to convert this csv file into the table.
+By the same methods as usual, I started by creating a direction `self.data = self.load_data()` and defining load_data
 
+`    def load_data(self):
+        data = []
+        with open('data.csv') as database:
+            file = csv.reader(database, delimite=",")
+            for o, row in enumerate(file):
+                for l, col in enumerate(row):
+                    data.append([o, l, col])
+                    self.tableWidget.setItem(o, l, QTableWidgetItem(col))
+
+        return data`
+  
+`**Code explanation:** I first set up a list. Then I opened the csv file as database and set a variable called file this variable read the database and defined the seperating value as ",'". Now I created o and l variables witch mentioned the file and row one by one. I appended the data in a list that contains o, l, col and set up the items with the setItem command to o, l and collumn (which are the ones we set from the database) finally I return the data so it goes in the list and the items are displayable.
 
 ## Editing
 
