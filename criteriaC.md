@@ -37,7 +37,16 @@ I modified all of the classes to be their parent so any work I do on a class onl
         super(logInApp, self).__init__(parent)
         self.setupUi(self)`
 ### c) Final touches before I started the functioning process:
-Since the program is abitrary (personal whim) amount of objects, I had to define QApplications as a container and the main as myMain window. Here is how I did it:
+
+I wanted my login app to appear as the first window so first, I chaned my login app to a stable window so it is attached in front of the mainwindow (from QTDesigner). To make the login app appear first, in the MainWindow class I put 
+
+`logVar = logInApp(self)
+ logVar.show()`
+ Right under the `self.setupUi` so that the mainwindow app is inaccesable with the login, which looks like this:
+ 
+ ![](appic.png)
+
+Finally, since the program is abitrary (personal whim) amount of objects, I had to define QApplications as a container and the main as myMain window. Here is how I did it:
 
 `container = QApplication(sys.argv)
 main = mainWindowApp()
@@ -48,7 +57,7 @@ Now that everything is done on the set-up part, I continued on with the function
 
 ## Functioning Buttons:
 ### a) Functioning betton for directing to other windows.
-To start with the program, I begined with placing the "Login" window in from of the MainWindow which is the menu. Firstly I
+To start with the program, I begined with placing the "Login" window in front of the MainWindow which is the menu. Firstly, I 
 ## Reading a database:
 
 ## Login:
