@@ -266,12 +266,14 @@ For canceling, I basically loaded the data we saved before.
 
 Lastly, I will define the changeDB file. This is the last part of my program.
 
-`    def changeDB(self):
+     `def changeDB(self):
         item = self.tableWidget.currentItem()
         row = self.tableWidget.currentRow()
         col = self.tableWidget.currentColumn()
         self.tableWidget.item(row, col).setBackground(QtGui.Qcolor(100, 100, 150))
         print(item.text())`
+        
+        
 I start by setting three variables. These are equilivent to the widgets of item, row and column respectively. One a square (the program sees it as row, col because anywhere you click will be in a row and a column) the place you clicked will change its background color so the user will know where they clicked and now the section is editable. By the buttons I generated, you can save or revert.     
 
 ## Final Notes and Improvements:
