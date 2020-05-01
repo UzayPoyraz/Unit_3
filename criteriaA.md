@@ -8,8 +8,10 @@ Compiling all of this information into one database would be very helpful.
 I will create a program that stored all of his erasers with all of the properties listed. These properties will be Brand, Material, used, unused and if used, is there a useable corner. The program will have an adding deleting and an editing function so that the client can do as they please. I will be using Python for this program since that is what we are learning right now and it is compatible with the designing application we are currently using. 
 
 ## Success Criteria
-1) Making a program that the user can edit, delete and add
-2) Seperating the erasers with the properties needed (Brand, Materials (PVC, PP etc..), used or unused and if there is still a usable corner left
-3) Collecting all information into one database
-4) The prints will be clearly understandable, hence, the instructions and context will be understandeable; making it more useable.
-
+1) Creating a program that the user can edit
+2) Creating a program that the user can delete
+3)Creating a program that the user can add
+4) Seperating the erasers with the properties needed (Brand, Materials (PVC, PP etc..), used or unused and if there is still a usable corner left
+5) Collecting all information into one database
+6) The prints will be clearly understandable, hence, the instructions and context will be understandeable; making it more useable.
+7) It will have secure login and register
