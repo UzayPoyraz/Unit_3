@@ -240,15 +240,29 @@ First I need to direct these files so I can define them
  `self.changes_btn.clicked.connect(self.save)
   self.revert_btn.clicked.connect(self.cancel)`
  
-The definitions for these two are rather simple:
+Now it is time to define them.
     
     `def save(self):
-        print("Save to CSV File")
+        with open("data.csv", "w", newline="") as database:
+            file = csv.writer(database)
+            rowc = self.tableWidget.rowCount()
+            colc = self.tableWidget.colorCount()
+            for row in range (rowc):
+                line = []
+                for col in range(colc):
+                    data = self.tableWidget.item(row, col)
+                    if data is not None:
+                        line.append(data.text())
+                file.writerow(line)`
+                
 
-    def cancel(self):
-        print("Reload the table")`
 
-Basically, pressing the change button will save the updated version to the csv file and the cancel button will reload the table, getting rid of the new changes.
+    `def cancel(self):
+        self.load_data`
+
+For saving, the logic I followed was basically instead of replacing the information that is newly added to the table, the save button will read all of the table and overwrite the csv file accordingly. The way I made it work is first I opened the cvs file as writing, then I set up variables which correspond to all of the collumn and rows respectively. Then I put the lines in a list and I added another for command to get collumn in all of the collums. Then I set the data as items in collumn and row. Finally I appended the list and wrote over according to the line array.
+
+For canceling, I basically loaded the data we saved before.
 
 Lastly, I will define the changeDB file. This is the last part of my program.
 
