@@ -12,7 +12,7 @@ I will create a program that stored all of his erasers with all of the propertie
 
 2) Creating a program that the user can delete
 
-3)Creating a program that the user can add
+ 3. Creating a program that the user can add
 
 4) Seperating the erasers with the properties needed (Brand, Materials (PVC, PP etc..), used or unused and if there is still a usable corner left
 
