@@ -9,9 +9,15 @@ I will create a program that stored all of his erasers with all of the propertie
 
 ## Success Criteria
 1) Creating a program that the user can edit
+
 2) Creating a program that the user can delete
+
 3)Creating a program that the user can add
+
 4) Seperating the erasers with the properties needed (Brand, Materials (PVC, PP etc..), used or unused and if there is still a usable corner left
+
 5) Collecting all information into one database
+
 6) The prints will be clearly understandable, hence, the instructions and context will be understandeable; making it more useable.
+
 7) It will have secure login and register
